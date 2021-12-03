@@ -6,20 +6,45 @@ const rl = readLine.createInterface({
     output: process.stdout
 });
 
-rl.question('Enter first number\n', function(num1){
-    rl.question('Enter second number\n', function(num2){
-        let result = biggerNumber(parseInt(num1), parseInt(num2));
-        console.log('Biggest number is: ', result);
-            fs.writeFile('./results.txt', `biggerNumber(${parseInt(num1)}, ${parseInt(num2)}) = ${result}`, () => {
-            console.log('Result is written in results.txt');
-        });
-        rl.close();
-    });
+
+rl.question('choose 1 or 2:\n', userInput => {
+    switch(userInput) {
+        case '1':
+            console.log('Please enter two numbers to be compared (seperated by enter):')
+            rl.question('Enter first number\n', function(num1){
+                rl.question('Enter second number\n', function(num2){
+                    let result = biggerNumber(parseInt(num1), parseInt(num2));
+                    console.log('Biggest number is: ', result);
+                        fs.writeFile('./results.txt', `biggerNumber(${parseInt(num1)}, ${parseInt(num2)}) = ${result}`, () => {
+                        console.log('Result is written in results.txt');
+                    });
+                    rl.close();
+                });
+            });
+            break;
+        case '2':
+            console.log('case2:');
+            rl.close();
+            break;
+        default:
+            console.log('Incorrect input. Terminating!');
+    }
+    //rl.close();
 });
 
+//Function for comparing two numbers and printing biggest of them to console and results.txt file
+//console.log('Please enter two numbers to be compared (seperated by enter):')
+//rl.question('Enter first number\n', function(num1){
+//    rl.question('Enter second number\n', function(num2){
+//        let result = biggerNumber(parseInt(num1), parseInt(num2));
+//        console.log('Biggest number is: ', result);
+//            fs.writeFile('./results.txt', `biggerNumber(${parseInt(num1)}, ${parseInt(num2)}) = ${result}`, () => {
+//            console.log('Result is written in results.txt');
+//        });
+//        rl.close();
+//    });
+//});
 
-//function biggerNumber test in console
-//console.log('Biggest number is: ', biggerNumber(a, b));
 //function numberSquares test in console
 //let n = 3;
 //console.log('Total individual squares: ', numberSquares(n));
