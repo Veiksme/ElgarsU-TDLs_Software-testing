@@ -10,7 +10,7 @@ function biggerNumber(a, b) {
     }
 }
 
-//Function to calculate number of individual squares in n * n grid
+//Function to calculate number of individual squares in N by N grid
 function numberSquares(n) {
     let squares;
     if (n === 0) {
@@ -27,8 +27,4 @@ function numberSquares(n) {
     }
 }
 
-function log(...message) {
-    console.log(...message);
-}
-
-module.exports = [biggerNumber, numberSquares, log];
+module.exports = [biggerNumber, numberSquares];
