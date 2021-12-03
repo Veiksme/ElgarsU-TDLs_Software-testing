@@ -6,10 +6,12 @@ const rl = readLine.createInterface({
     output: process.stdout
 });
 
-
-rl.question('choose 1 or 2:\n', userInput => {
+console.log('Blue pill: biggerNumber(a, b)');
+console.log('Red pill: numberSquares(n)');
+console.log('');
+rl.question('Choose blue or red pill:\n', userInput => {
     switch(userInput) {
-        case '1':
+        case 'blue':
             console.log('Please enter two numbers to be compared (seperated by enter):')
             rl.question('Enter first number\n', function(num1){
                 rl.question('Enter second number\n', function(num2){
@@ -22,12 +24,13 @@ rl.question('choose 1 or 2:\n', userInput => {
                 });
             });
             break;
-        case '2':
+        case 'red':
             console.log('case2:');
             rl.close();
             break;
         default:
             console.log('Incorrect input. Terminating!');
+            rl.close();
     }
     //rl.close();
 });
