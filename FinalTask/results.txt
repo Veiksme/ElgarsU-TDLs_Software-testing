@@ -1,1 +1,1 @@
-biggerNumber(88, 4) = 88
+_red_biggerNumber(2, 1) = 2
