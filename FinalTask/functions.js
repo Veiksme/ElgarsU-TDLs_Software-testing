@@ -19,14 +19,20 @@ console.log('Function returns biggest number of two: ', biggerNumber(50, 9));
 
 function numberSquares(n) {
     let squares;
-    if (n = 0) {
+    if (n === 0) {
         squares = 'You entered 0, square count is 0';
         return squares;
-//    } else {
-//        let squareItterator = n;
-//        do {
-//            squares = 
+    } else {
+        let squareItterator = 1;
+        let squares = 0;
+        do {
+            squares = squares + squareItterator * squareItterator;
+            squareItterator++;
+        } while (squareItterator <= n);   
+        return squares;
     }
-    
-    }
-//}
+}
+
+//function numberSquares test in console
+
+console.log('Function returns number of individual squares: ', numberSquares(4));
