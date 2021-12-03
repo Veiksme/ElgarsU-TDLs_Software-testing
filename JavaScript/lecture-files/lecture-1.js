@@ -45,6 +45,8 @@ switch (someString) {
  * i = i + 1;
  */
 
+// Loops
+
 for (let i = 0; i < 10; i++) {
     console.log(`for loop brr ${i}`);
 }

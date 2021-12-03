@@ -1,0 +1,2 @@
+Writing to file text2
+I am adding more text

@@ -1,4 +1,4 @@
-/* 
+
 let iAmAvariable = 10;
 const constVar = 15;
 
@@ -19,26 +19,26 @@ let isBigger = b >= a;
 
 console.log(isBigger);
 
-// Strings 
-// let txt = 'Hello World!';
-// let txt2 = txt.slice(0, 3);
-// console.log(`slice hello world : ${txt2}`);
-// let txt3 = txt.substr(1, 3);
-// console.log(`substr hello world : ${txt3}`);
-// let txt4 = txt.replace('l', 'i');
-// console.log(`replace l with i hello world : ${txt4}`);
-// let txt5 = txt.replaceAll('l', 'i');
-// console.log(`replaceAll l with i hello world : ${txt5}`);
-// console.log(`replaceAll l with i hello world to upper case: ${txt5.toUpperCase()}`);
-// console.log(`replaceAll l with i hello world to upper case: ${txt5.toLowerCase()}`);
-// let trimmed = txt.trim();
-// console.log(`trim leading whitespaces ${trimmed}`)
+//Strings 
+let txt = 'Hello World!';
+let txt2 = txt.slice(0, 3);
+console.log(`slice hello world : ${txt2}`);
+let txt3 = txt.substr(1, 3);
+console.log(`substr hello world : ${txt3}`);
+let txt4 = txt.replace('l', 'i');
+console.log(`replace l with i hello world : ${txt4}`);
+let txt5 = txt.replaceAll('l', 'i');
+console.log(`replaceAll l with i hello world : ${txt5}`);
+console.log(`replaceAll l with i hello world to upper case: ${txt5.toUpperCase()}`);
+console.log(`replaceAll l with i hello world to upper case: ${txt5.toLowerCase()}`);
+let trimmed = txt.trim();
+console.log(`trim leading whitespaces ${trimmed}`)
 
 let orange = "Orange";
 orange = orange.slice(2, 3).toUpperCase();
 console.log(orange);
 
-// Array
+//Array
 const people = ['Oskars', 'Karlis', 'Marics', 'Viktorija'];
 console.log('People in array : ', people);
 console.log(`Person at index: 3 :${people[3]}`);
