@@ -1,4 +1,3 @@
-
 //Function to return biggest number of two
 function biggerNumber(a, b) {
     let biggestNumber;
@@ -10,9 +9,6 @@ function biggerNumber(a, b) {
         return biggestNumber;
     }
 }
-
-//function biggerNumber test in console
-console.log('Function returns biggest number of two: ', biggerNumber(50, 9));
 
 //Function to calculate number of individual squares in n * n grid
 function numberSquares(n) {
@@ -31,7 +27,8 @@ function numberSquares(n) {
     }
 }
 
-//function numberSquares test in console
-console.log('Function returns number of individual squares: ', numberSquares(4));
+function log(...message) {
+    console.log(...message);
+}
 
-module.exports = [biggerNumber, numberSquares];
+module.exports = [biggerNumber, numberSquares, log];
