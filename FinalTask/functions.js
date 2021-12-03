@@ -12,11 +12,9 @@ function biggerNumber(a, b) {
 }
 
 //function biggerNumber test in console
-
 console.log('Function returns biggest number of two: ', biggerNumber(50, 9));
 
 //Function to calculate number of individual squares in n * n grid
-
 function numberSquares(n) {
     let squares;
     if (n === 0) {
@@ -34,5 +32,6 @@ function numberSquares(n) {
 }
 
 //function numberSquares test in console
-
 console.log('Function returns number of individual squares: ', numberSquares(4));
+
+module.exports = [biggerNumber, numberSquares];

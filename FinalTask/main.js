@@ -1,0 +1,1 @@
+const [biggerNumber, numberSquares];
