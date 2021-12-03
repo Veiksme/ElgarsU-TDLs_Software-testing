@@ -1,1 +1,1 @@
-_red_biggerNumber(2, 1) = 2
+numberSquares(2) = 5

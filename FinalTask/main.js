@@ -6,18 +6,21 @@ const rl = readLine.createInterface({
     output: process.stdout
 });
 
+//Present user with choice of functions
 console.log('Blue pill: biggerNumber(a, b)');
 console.log('Red pill: numberSquares(n)');
 console.log('');
 rl.question('Choose blue or red pill:\n', userInput => {
     switch(userInput) {
+        //Case 
         case 'blue':
-            console.log('Please enter two numbers to be compared (seperated by enter):')
+            console.log('');
+            console.log('This function compares two numbers and determines the biggest:')
             rl.question('Enter first number\n', function(num1){
                 rl.question('Enter second number\n', function(num2){
-                    let result = biggerNumber(parseInt(num1), parseInt(num2));
-                    console.log('Biggest number is: ', result);
-                        fs.writeFile('./results.txt', `biggerNumber(${parseInt(num1)}, ${parseInt(num2)}) = ${result}`, () => {
+                    let biggest = biggerNumber(parseInt(num1), parseInt(num2));
+                    console.log('Biggest number is: ',biggest);
+                        fs.writeFile('./results.txt', `biggerNumber(${parseInt(num1)}, ${parseInt(num2)}) = ${biggest}`, () => {
                         console.log('Result is written in results.txt');
                     });
                     rl.close();
@@ -25,17 +28,16 @@ rl.question('Choose blue or red pill:\n', userInput => {
             });
             break;
         case 'red':
-            console.log('_red_Please enter two numbers to be compared (seperated by enter):')
-            rl.question('_red_Enter first number\n', function(num1){
-                rl.question('_red_Enter second number\n', function(num2){
-                    let result = biggerNumber(parseInt(num1), parseInt(num2));
-                    console.log('_red_Biggest number is: ', result);
-                        fs.writeFile('./results.txt', `_red_biggerNumber(${parseInt(num1)}, ${parseInt(num2)}) = ${result}`, () => {
-                        console.log('_red_Result is written in results.txt');
+            console.log('');
+            console.log('This function calculates how many squares can fit in N * N square grid:')
+            rl.question('Enter grid dimension N\n', function(num1){
+                let squares = numberSquares(parseInt(num1));
+                console.log('Result is: ',squares);
+                        fs.writeFile('./results.txt', `numberSquares(${parseInt(num1)}) = ${squares}`, () => {
+                        console.log('Result is written in results.txt');
                     });
                     rl.close();
                 });
-            });
             break;
         default:
             console.log('Incorrect input. Terminating!');
