@@ -1,7 +1,11 @@
 //Function to return biggest number of two
 function biggerNumber(a, b) {
     let biggestNumber;
-    if (a > b) {
+    //Case for equal numbers
+    if (a === b) {
+        biggestNumber = 'The numbers entered are equal.';
+        return biggestNumber;
+    } else if (a > b) {
         biggestNumber = a
         return biggestNumber;
     } else {
@@ -14,6 +18,7 @@ function biggerNumber(a, b) {
 function numberSquares(n) {
     let squares;
     if (n === 0) {
+        //Case for zero
         squares = 'You entered 0, square count is 0';
         return squares;
     } else {

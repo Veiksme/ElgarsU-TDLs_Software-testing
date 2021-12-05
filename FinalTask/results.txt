@@ -1,1 +1,1 @@
-numberSquares(2) = 5
+numberSquares(6) = 91
