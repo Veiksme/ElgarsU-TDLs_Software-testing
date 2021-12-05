@@ -1,5 +1,5 @@
-const biggerNumber = require('./functions.js');
-const numberSquares = require('./functions.js');
+const [biggerNumber, numberSquares] = require('./functions.js');
+//const numberSquares = require('./functions.js');
 const fs = require('fs');
 const readLine = require('readline');
 const rl = readLine.createInterface({

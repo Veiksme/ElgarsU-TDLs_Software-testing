@@ -1,1 +1,1 @@
-biggerNumber(4, 1) = 4
+numberSquares(3) = 14
