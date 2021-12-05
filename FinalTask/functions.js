@@ -32,4 +32,7 @@ function numberSquares(n) {
     }
 }
 
-module.exports = [biggerNumber, numberSquares];
+module.exports = {
+    biggerNumber: biggerNumber,
+    numberSquares: numberSquares
+}
