@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 function fizzBuzz(number) {
   if (number % 3 === 0 && number % 5 === 0) {
     return "fizzbuzz";
@@ -48,7 +49,7 @@ describe.skip(  "Fizz buzz unit test cases", () => {
   });
 });
 
-describe("Day 1 example of E2E tests", () => {
+describe.skip("Day 1 example of E2E tests", () => {
   //Logging into a web page
   it("Logging in with a standart user", () => {
     cy.visit("https://www.saucedemo.com/");
@@ -61,4 +62,75 @@ describe("Day 1 example of E2E tests", () => {
     cy.get(".submit-button").click();
     cy.get(".inventory_item").should("be.visible");
   });
+});
+
+describe.skip("Missing user error in login page", () => {
+  //Logging into a web page
+  it("Logging in with a standart user", () => {
+    cy.visit("https://www.saucedemo.com/");
+    //
+    cy.get("#user-name").type("locked_out_user");
+    //Best way to find elements with, added by QAs , will never change unless somebody hates you
+    //cy.get("[data-test=password]").type("secret_sauce");
+    //Class name, not the best approach , suspectable to change quite frequently
+    cy.get(".submit-button").click();
+    cy.get("[data-test=error]").should("have.text", "Epic sadface: Password is required");
+  });
+});
+
+describe.skip("Missing password error in login page", () => {
+  //Logging into a web page
+  it("Logging in with a standart user", () => {
+    cy.visit("https://www.saucedemo.com/");
+    //
+    //cy.get("#user-name").type("locked_out_user");
+    //Best way to find elements with, added by QAs , will never change unless somebody hates you
+    //cy.get("[data-test=password]").type("secret_sauce");
+    //Class name, not the best approach , suspectable to change quite frequently
+    cy.get(".submit-button").click();
+    cy.get("[data-test=error]").should("have.text", "Epic sadface: Username is required");
+  });
+});
+
+describe.skip("Missing password error in login page", () => {
+  //Logging into a web page
+  it("Logging in with a standart user", () => {
+    cy.visit("https://www.saucedemo.com/");
+    //
+    cy.get("#user-name").type("SDfd");
+    //
+    cy.get("[data-test=password]").type("fsdfdsfs");
+    //
+    cy.get(".submit-button").click();
+    cy.get("[data-test=error]").should("have.text", "Epic sadface: Username and password do not match any user in this service");
+    
+  });
+});
+
+describe.skip("Cookies test!", () => {
+  //Logging into a web page
+  it("Logging in with a standart user", () => {
+    cy.visit("https://www.saucedemo.com/");
+    //
+    cy.get("#user-name").type("standard_user");
+    //
+    cy.get("[data-test=password]").type("secret_sauce");
+    //
+    cy.get(".submit-button").click();
+    //Check cookies
+    cy.getCookie("session-username").then((cookie) => {
+      expect(cookie.value).to.eq("standard_user")
+    });
+  });
+
+  it("Sarting the test case without logging in with UI", () => {
+    cy.setCookie("session-username", "standard_user");
+    cy.visit("https://www.saucedemo.com/", {failOnStatusCode: false});
+  });
+});
+
+  describe("Cookies test!", () => {
+  it ("showcasing cypress commands", () => {
+    cy.loggin("standard_user")
+});
 });
