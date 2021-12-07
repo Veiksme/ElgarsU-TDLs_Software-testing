@@ -17,10 +17,10 @@ function validateFizzBuzz(array, expected) {
   });
 }
 
-describe.skip("Fizz buzz unit test cases", () => {
+describe.skip(  "Fizz buzz unit test cases", () => {
   //Mocha hooks
   before(() => {
-    cy.log("Running only once before the test case");
+    cy.log( "Running only once before the test case");
   });
 
   beforeEach(() => {
