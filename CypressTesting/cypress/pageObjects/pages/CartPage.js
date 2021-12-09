@@ -3,7 +3,7 @@
 import { BasePage } from "../BasePage";
 
 const ALL_CART_ITEM_NAMES = ".inventory_item_name";
-const CHECKOUT_BUTTON = "#checkout"
+const CHECKOUT_BUTTON = "#checkout";
 
 export class CartPage extends BasePage {
   static verifyAddedItem() {
@@ -12,11 +12,7 @@ export class CartPage extends BasePage {
     });
   }
 
-  static goToCheckout () {
-      this.click(CHECKOUT_BUTTON);
-    }
-  
   static goToCheckout() {
-      this.click(CHECKOUT_BUTTON);
-    }
+    this.click(CHECKOUT_BUTTON);
+  }
 }

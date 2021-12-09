@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 import { BasePage } from "../BasePage";
 
 const FIRST_NAME_BOX = "#first-name";
