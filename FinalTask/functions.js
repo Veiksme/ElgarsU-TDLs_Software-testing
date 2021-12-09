@@ -33,10 +33,10 @@ function numberSquares(n) {
 }
 
 //This line works when running node main.js but mocha test does not run
-module.exports = [biggerNumber, numberSquares];
+//module.exports = [biggerNumber, numberSquares];
 
 //These lines work with mocha, but node main.js doest not run
-//module.exports = {
-//    biggerNumber: biggerNumber,
-//    numberSquares: numberSquares
-//}
+module.exports = {
+    biggerNumber: biggerNumber,
+    numberSquares: numberSquares
+}

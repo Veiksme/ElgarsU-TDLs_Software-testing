@@ -1,4 +1,5 @@
-const functions = require('../functions.js');
+//const functions = require('../functions.js');
+const [biggerNumber, numberSquares] = require('./functions.js');
 const assert = require('chai').assert
 
 describe('Node tests for functions.js', function() {

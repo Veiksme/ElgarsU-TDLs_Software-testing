@@ -1,4 +1,11 @@
 {
-    "defaultCommandTimeout": 4000,
-    "chromeWebSecurity": false
+  "defaultCommandTimeout": 4000,
+  "chromeWebSecurity": false,
+  "projectId": "dt2qan",
+  "reporter": "mochawesome",
+  "reporter-options": {
+    "reportDir": "cypress/results",
+    "hmtl": true,
+    "overwrite": false
   }
+}
