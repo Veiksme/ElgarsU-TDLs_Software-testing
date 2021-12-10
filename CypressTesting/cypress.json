@@ -1,11 +1,14 @@
 {
-  "defaultCommandTimeout": 4000,
+  "baseUrl": "https://www.saucedemo.com",
+  "defaultCommandTimeout": 15000,
   "chromeWebSecurity": false,
   "projectId": "dt2qan",
   "reporter": "mochawesome",
-  "reporter-options": {
+  "reporterOptions": {
     "reportDir": "cypress/results",
-    "hmtl": true,
+    "html": false,
     "overwrite": false
   }
 }
+
+
